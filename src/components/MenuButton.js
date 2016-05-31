@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import {toggleDrawer} from '../actions/drawerAction'
 import { bindActionCreators } from 'redux'
 
-const width = Dimensions.get('window').width * 0.2
+const width = Dimensions.get('window').width * 0.20
 
 // {this.props.drawer ? 'True' : 'False' }
 class MenuButton extends React.Component {
@@ -14,7 +14,7 @@ class MenuButton extends React.Component {
     console.log(this.props);
     return <View style={{position: 'absolute', bottom: 0, width: width, alignItems: 'center'}}>
             <Icon name='menu' size={55} onPress={() => {this.props.toggleDrawer(); }} />
-          <Text style={{fontSize: 20, }} >
+          <Text style={{fontSize: 20, marginTop:-18}} >
             {this.props.drawer ? 'Close' : 'Open' }
           </Text>
     </View>

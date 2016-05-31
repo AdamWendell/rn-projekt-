@@ -33,7 +33,6 @@ class MyComponent2 extends React.Component {
       <View>
         <Modal
           visible={this.state.modalVisible}
-          transparent={true}
           onRequestClose={() => this.showModal(false)}
           >
           <Drawer
@@ -49,10 +48,12 @@ class MyComponent2 extends React.Component {
           >
             <View><Text onPress={() => this.showModal(false)}>Heeeeeeeeeeeeej</Text></View>
           </Drawer>
+          <MenuButton />
         </Modal>
         <Text style={{marginTop: 150}} onPress={() => this.showModal(true)} >
           The current scene
         </Text>
+
       </View>
     );
   }

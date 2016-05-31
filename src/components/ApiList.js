@@ -50,6 +50,7 @@ class ApiList extends React.Component {
     return (
       <ListView
         dataSource={this.props.dataSource}
+        initialListSize={2}
         renderRow={(rowData, sectionID, rowID, highlightRow) => this.renderRow(rowData)}
       />
     );
